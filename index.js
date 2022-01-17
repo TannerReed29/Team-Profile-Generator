@@ -79,7 +79,6 @@ const promptUser = () => {
         ])
         .then(({github, addRole}) => {
             engineer.push(new Engineer(name, id, email, github))
-            console.log(employee)
             if (addRole) {
                 return promptUser();
             }
@@ -109,7 +108,7 @@ const promptUser = () => {
 
 
 promptUser()
-    .then(employee => {
+    .then(Data => {
         return generatePage(employee)
     })
     .then(pageHtml => {
