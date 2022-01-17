@@ -1,17 +1,17 @@
-const fs = require('fs');
+    // package requirements
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template');
 const writeFile = require('./src/generate-site');
 
-
+    // class requirements
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
-const Employee = require('./lib/Employee');
 const Intern = require('./lib/Intern');
 
 let manager = [];
 let engineer = [];
 let intern = [];
+    // employee Array
 let employee = {manager, engineer, intern};
 
 const promptUser = () => {

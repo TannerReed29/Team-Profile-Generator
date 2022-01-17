@@ -1,4 +1,6 @@
+    // Employee Card Generation
 const genEmployeeCards = Data => {
+        // Manager Card Template
     const manager = Data.manager.map(function(employee) {
         let mHtml = `
         <div class ="col card-deck card-body">
@@ -18,7 +20,7 @@ const genEmployeeCards = Data => {
         `;
         return mHtml
     });
-
+        // Engineer Card Template
     const engineer = Data.engineer.map(function(employee) {
         let eHtml = `
         <div class ="col card-deck card-body">
@@ -38,7 +40,7 @@ const genEmployeeCards = Data => {
         `;
         return eHtml
     });
-    
+        // Intern Card Template
     const intern = Data.intern.map(function(employee) {
         let iHtml = `
         <div class ="col card-deck card-body">
@@ -61,7 +63,7 @@ const genEmployeeCards = Data => {
     return [manager,engineer,intern]
 }
 
-
+    // Main HTML Template
 module.exports = templateData => {
     return `
         <!DOCTYPE html>
